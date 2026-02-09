@@ -1,9 +1,9 @@
 package netology.homework.accounts;
 
-public class SimpleAccount extends Account{
+public class SimpleAccount extends Account {
     @Override
     public boolean add(long amount) {
-        if(amount<0){
+        if (amount < 0) {
             return false;
         }
         balance += amount;
@@ -12,7 +12,7 @@ public class SimpleAccount extends Account{
 
     @Override
     public boolean pay(long amount) {
-        if(amount>balance){
+        if (amount > balance) {
             return false;
         }
         balance -= amount;

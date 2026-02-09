@@ -1,6 +1,6 @@
 package netology.homework.accounts;
 
-public class CreditAccount extends Account{
+public class CreditAccount extends Account {
     private long creditLimit;
 
     public CreditAccount(long creditLimit) {
@@ -9,16 +9,16 @@ public class CreditAccount extends Account{
 
     @Override
     public boolean add(long amount) {
-        if(amount<0){
+        if (amount < 0) {
             return false;
         }
-        balance = Math.min(0, balance+amount);
+        balance = Math.min(0, balance + amount);
         return true;
     }
 
     @Override
     public boolean pay(long amount) {
-        if(balance-amount<creditLimit){
+        if (balance - amount < creditLimit) {
             return false;
         }
         balance -= amount;
